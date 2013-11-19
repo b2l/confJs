@@ -60,15 +60,40 @@
 				</section>
 
 				<section>
-                    <h2>Pourquoi Tester ?</h2>
-                    <p>
-                        Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
-                    </p>
-
-                    <aside class="notes">
-                        Christophe
-                    </aside>
-				</section>
+                    <section>
+                        <h2>Pourquoi Tester ?</h2>
+                        <p>
+                            Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
+                        </p>
+                        <aside class="notes">
+                            Christophe
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Pourquoi Tester ?</h2>
+                        <p><img src="img/MarketShare_all.png"/></p>
+                        <p><i>source : <a href="http://www.w3counter.com">www.w3counter.com</a></i></p>
+                        <aside class="notes">
+                            Christophe
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Pourquoi Tester ?</h2>
+                        <p><img src="img/MarketShare_IE_vs_Others.png"/></p>
+                        <br><i>source : <a href="http://www.w3counter.com">www.w3counter.com</a></i></p>
+                        <aside class="notes">
+                            Christophe
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Pourquoi Tester ?</h2>
+                        <p><img src="img/Compatibilite_CanIUse.png"/><p>
+                        <br><i>source : <a href="http://caniuse.com">www.caniuse.com</a></i></p>
+                        <aside class="notes">
+                            Christophe
+                        </aside>
+                    </section>
+                </section>
 
                 <section>
                     <section>
@@ -169,7 +194,7 @@
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
@@ -183,6 +208,41 @@
 			});
 
 		</script>
+        <!--Load the AJAX API-->
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+
+            // Load the Visualization API and the piechart package.
+            google.load('visualization', '1.0', {'packages':['corechart']});
+
+            // Set a callback to run when the Google Visualization API is loaded.
+            google.setOnLoadCallback(drawChart);
+
+            // Callback that creates and populates a data table,
+            // instantiates the pie chart, passes in the data and
+            // draws it.
+            function drawChart() {
+
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data.addRows([
+                ['Mushrooms', 3],
+                ['Onions', 1],
+                ['Olives', 1],
+                ['Zucchini', 1],
+                ['Pepperoni', 2]
+            ]);
+
+            // Set chart options
+            var options = {'title':'Parts de marché des différents navigateurs','width':800,'height':600};
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+}
+        </script>
 
 	</body>
 </html>
