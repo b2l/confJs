@@ -69,6 +69,16 @@
                     </section>
                     <section>
                         <h2>Pourquoi Tester ?</h2>
+                        <p>
+                            Coût d'un bug
+                            <canvas id="bugCost" width="800" height="600"></canvas>
+                        </p>
+                        <aside class="notes">
+                            Christophe
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Pourquoi Tester ?</h2>
                         <p><img src="img/MarketShare_all.png"/></p>
                         <p><i>source : <a href="http://www.w3counter.com">www.w3counter.com</a></i></p>
                         <aside class="notes">
@@ -95,10 +105,7 @@
 
                 <section>
                     <section>
-                        <h2>Que Tester ?</h2>
-                        <p>
-                            Son code abruti !
-                        </p>
+                        <h2>Les types de tests</h2>
                         <aside class="notes">
                             Nico: Les différents type de test
                         </aside>
@@ -188,7 +195,8 @@
 
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+		<script src="lib/js/Chart.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
 		<script>
@@ -216,41 +224,29 @@
 			});
 
 		</script>
-        <!--Load the AJAX API-->
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
         <script type="text/javascript">
-
-            // Load the Visualization API and the piechart package.
-            google.load('visualization', '1.0', {'packages':['corechart']});
-
-            // Set a callback to run when the Google Visualization API is loaded.
-            google.setOnLoadCallback(drawChart);
-
-            // Callback that creates and populates a data table,
-            // instantiates the pie chart, passes in the data and
-            // draws it.
-            function drawChart() {
-
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-                ['Mushrooms', 3],
-                ['Onions', 1],
-                ['Olives', 1],
-                ['Zucchini', 1],
-                ['Pepperoni', 2]
-            ]);
-
-            // Set chart options
-            var options = {'title':'Parts de marché des différents navigateurs','width':800,'height':600};
-
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-}
+            // Coût d'un bug
+            var ctx = document.getElementById("bugCost").getContext("2d");
+            var data = {
+                labels : ["1 jour","1 semaine","1 mois","3 mois","6 mois","1 an","5 ans"],
+                datasets : [
+                    {
+                        fillColor : "rgba(151,187,205,0.5)",
+                        strokeColor : "rgba(151,187,205,1)",
+                        pointColor : "rgba(151,187,205,1)",
+                        pointStrokeColor : "#fff",
+                        data : [5,15,50,100,200,500,1000]
+                    }
+                ]
+            };
+            var options = {
+                bezierCurve : false,
+                scaleShowLabels: false,
+                scaleShowLine: false,
+                animation: false
+            };
+            var chart = new Chart(ctx).Line(data, options);
         </script>
-
 	</body>
 </html>
