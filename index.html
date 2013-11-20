@@ -112,30 +112,41 @@
                     </section>
 
                     <section>
-                        <h2>Test Unitaire</h2>
+                        <h2>Tests Unitaires</h2>
+                        <pre>
+                            <code class="javascript">
+Model.prototype.create = function (title, callback) {
+    title = title || '';
+    callback = callback || function () {};
 
+    var newItem = {
+        title: title.trim(),
+        completed: 0
+    };
+
+    this.storage.save(newItem, callback);
+    return newItem;
+};
+                            </code>
+                        </pre>
                         <aside class="notes">
                             bliblablou
                         </aside>
                     </section>
 
                     <section>
-                        <h2>Test d'intégraion</h2>
+                        <h2>Tests d'intégration</h2>
+                        <p>
+                            <img src="img/TestIntegration.png"/>
+                        </p>
                         <aside class="notes">
                             bliblablou
                         </aside>
                     </section>
 
                     <section>
-                        <h2>Test d'Interface</h2>
-                        <img src="img/todoMvc_ihm.gif"/>
-                        <aside class="notes">
-                            bliblablou
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Test fonctionnel</h2>
+                        <h2>Tests End-to-End</h2>
+                        <img src="img/TestEndToEnd.png"/>
                         <aside class="notes">
                             bliblablou
                         </aside>
