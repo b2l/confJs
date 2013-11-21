@@ -46,9 +46,7 @@
 					<nav>
                         <ul>
                             <li>Pourquoi tester ?</li>
-                            <li>Que tester ?</li>
-                            <li>TDD ici aussi !</li>
-                            <li>Les outils</li>
+                            <li>Live coding</li>
                         </ul>
 					</nav>
 
@@ -105,90 +103,62 @@
 
                 <section>
                     <section>
-                        <h2>Les types de tests</h2>
+                        <h2>Live coding</h2>
+                        <p><img class="fragment" src="img/ScreenshotAppli.gif"/><p>
+                        <aside class="notes">
+                            Nico: Les différents type de test
+                        </aside>
+                    </section>
+
+                     <section>
+                        <h2>Step #1</h2>
+
+                        <pre class="fragment"><code class="bash">
+christophe@antares:$ curl http://localhost:5000
+
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Le Projet !&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;      
+    &lt;/body&gt;
+&lt;/html&gt;
+
+                        </code></pre>
+                        
+                        <aside class="notes">
+                        
+                        </aside>
+                    </section>
+
+
+                    <section>
+                        <h2>Step #2</h2>
+                        <pre class="fragment"><code class="javascript">
+function Model() {
+    this.elements = [];
+}
+
+Model.prototype.addElement = function(element) {
+    this.elements.push(element);
+};
+                        </code></pre>
                         <aside class="notes">
                             Nico: Les différents type de test
                         </aside>
                     </section>
 
                     <section>
-                        <h2>Tests Unitaires</h2>
-                        <pre>
-                            <code class="javascript">
-Model.prototype.create = function (title, callback) {
-    title = title || '';
-    callback = callback || function () {};
+                        <h2>Step #3</h2>
 
-    var newItem = {
-        title: title.trim(),
-        completed: 0
-    };
-
-    this.storage.save(newItem, callback);
-    return newItem;
-};
-                            </code>
-                        </pre>
-                        <aside class="notes">
-                            bliblablou
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Tests d'intégration</h2>
-                        <p>
-                            <img src="img/TestIntegration.png"/>
+                        <p class="fragment">
+                            <img src="img/JsHtml.png"/>
+                            <img src="img/chrome.png" style="height:183px; margin-left:20px;"/>
                         </p>
                         <aside class="notes">
-                            bliblablou
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Tests End-to-End</h2>
-                        <img src="img/TestEndToEnd.png"/>
-                        <aside class="notes">
-                            bliblablou
-                        </aside>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>TDD ici aussi !</h2>
-                    <p>
-                        Où l'on parle bonnes pratiques
-                    </p>
-                    <aside class="notes">
-                        bliblablou
-                    </aside>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Les outils</h2>
-                        <p>
-                            <img src="img/CouteauSuisse.jpg"/>
-                        </p>
-                        <aside class="notes">
-                            bliblablou
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Testem</h2>
-                        <p>
-                            <img src="img/ScreenshotTestem.png"/>
-                        </p>
-                        <aside class="notes">
-                            bliblablou
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Karma</h2>
-                        <p>
-                            <img src="img/ScreenshotKarma.png"/>
-                        </p>
-                        <aside class="notes">
-                            bliblablou
+                            Nico: Les différents type de test
                         </aside>
                     </section>
                 </section>
