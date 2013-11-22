@@ -196,10 +196,6 @@ Model.prototype.addElement = function(element) {
 
                         Mock, Stub, Spies et FakeXHR
                     </section>
-                    <section>
-                        <h2>Mock !</h2>
-
-                    </section>
 
                     <section>
                         <h2>Stub !</h2>
@@ -226,6 +222,46 @@ store.findAll = function() {
                             <br/>
                             sinon, il regarde si elle existe dans le prototype. S'il ne la touve pas, il remonte au prototype parent et ainsi desuite.
                         </aside>
+                    </section>
+
+                    <section>
+                        <h2>Mock !</h2>
+<pre><code>var store = new Store();
+var model = new Model(store);
+
+var mock = sinon.mock(store);
+mock.expects('findAll').once();
+
+model.all();
+
+mock.verify();
+// On s'assure que la méthode all de model à bien appelé
+// la methode findAll de store;
+</code></pre>
+                        <aside class="notes">
+                            Le mock impémente toutes les fonctionnalitées de Spies et Stub, mais il permet en plus de faire des assertions:
+                            paramètres passé, nombre d'appel à la méthode etc...
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>FakeXHR !</h2>
+
+<pre><code>var server = sinon.fakeServer.create();
+server.autoRespond = true;
+server.respondWith('GET', '/elements', [200, {
+    'Content-Type': 'application/json'
+}, '["elem1", "elem2", "elem3"]']);
+
+Store.findAll = function() {
+    xhr.get('/elements' ...);
+}
+
+var store = new Store();
+store.findAll();
+// => L'appel xhr dans la methode recevra les données définie
+//      dans server.respondWith
+</code></pre>
                     </section>
 
                 </section>

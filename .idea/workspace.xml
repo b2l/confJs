@@ -4,16 +4,19 @@
     <list default="true" id="541c6df4-c2b9-4c37-af22-713a4b883602" name="Default" comment="" />
     <ignored path="confJs.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385126776902" ignored="false" />
-    <file path="/dummy.xml" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385126670176" ignored="false" />
+    <file path="/index.html" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385128927464" ignored="false" />
+    <file path="/dummy.xml" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385128878728" ignored="false" />
     <file path="/pres.css" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1384511385805" ignored="false" />
     <file path="$PROJECT_DIR$/../conf-tester-son-js/test/UI/casper.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1384881023420" ignored="false" />
     <file path="$PROJECT_DIR$/../conf-tester-son-js/test/UI/dalek.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1384881023420" ignored="false" />
     <file path="/Dummy.txt" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1384880438608" ignored="false" />
     <file path="$PROJECT_DIR$/../conf-tester-son-js/js/controller.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1384881023420" ignored="false" />
     <file path="$PROJECT_DIR$/../conf-tester-son-js/js/app.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1384881023420" ignored="false" />
-    <file path="$PROJECT_DIR$/../testerSonJsAutomatiquement/client/test/unit/specs/ModelTest.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385125713296" ignored="false" />
+    <file path="$PROJECT_DIR$/../testerSonJsAutomatiquement/client/test/unit/specs/ModelTest.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385129226130" ignored="false" />
     <file path="/default.css" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385125891843" ignored="false" />
+    <file path="/ModelTest.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385129191299" ignored="false" />
+    <file path="$PROJECT_DIR$/../testerSonJsAutomatiquement/client/src/js/Store.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385129289386" ignored="false" />
+    <file path="/Store.js" changelist="541c6df4-c2b9-4c37-af22-713a4b883602" time="1385129287478" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="45" selection-start="6877" selection-end="6877" vertical-scroll-proportion="0.38922155">
+            <state line="208" column="70" selection-start="7167" selection-end="7167" vertical-scroll-proportion="0.44311377">
               <folding />
             </state>
           </provider>
@@ -358,7 +361,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="45" selection-start="6877" selection-end="6877" vertical-scroll-proportion="0.38922155">
+        <state line="208" column="70" selection-start="7167" selection-end="7167" vertical-scroll-proportion="0.44311377">
           <folding />
         </state>
       </provider>
