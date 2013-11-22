@@ -190,6 +190,44 @@ Model.prototype.addElement = function(element) {
                             Nico: Les différents type de test
                         </aside>
                     </section>
+
+                    <section>
+                        <h2>Step #5</h2>
+
+                        Mock, Stub, Spies et FakeXHR
+                    </section>
+                    <section>
+                        <h2>Mock !</h2>
+
+                    </section>
+
+                    <section>
+                        <h2>Stub !</h2>
+<pre><code>function Store() {}
+Store.prototype.findAll = function() {
+    console.log('je suis la vrai methode findAll');
+}
+
+store.findAll();
+// => je suis la vrai methode findAll
+
+sinon.stub(store, 'findAll').yields('Je suis le stub de store.findAll');
+
+store.findAll(); // => Je suis le stub de store.findAll
+
+// Équivalent à
+store.findAll = function() {
+    return 'Je suis le stub de store.findAll';
+};</code></pre>
+                        <aside class="notes">
+                            C'est l'heritage prototypal en javascript qui permet de redefinir une methode directement au niveau de l'instance
+                            <br/>
+                            Lors de l'appel à la methode findAll, le moteur JS commence par regarder si l'objet contient une propriété,
+                            <br/>
+                            sinon, il regarde si elle existe dans le prototype. S'il ne la touve pas, il remonte au prototype parent et ainsi desuite.
+                        </aside>
+                    </section>
+
                 </section>
 
                 <section>
