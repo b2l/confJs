@@ -1,0 +1,7 @@
+{
+  "name": "TesterSonJSSlides",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt-contrib-connect": "~0.5.0"
+  }
+}
