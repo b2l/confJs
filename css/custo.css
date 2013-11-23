@@ -1,0 +1,15 @@
+.v-align-middle td {
+  vertical-align: middle;
+}
+
+.reveal section img.no-border {
+  margin: 45px 0px;
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}

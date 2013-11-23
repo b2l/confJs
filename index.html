@@ -8,8 +8,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/custo.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,27 +43,13 @@
 				</section>
 
 				<section>
-					<h2>Agenda</h2>
-					<nav>
-                        <ul>
-                            <li>Pourquoi tester ?</li>
-                            <li>Live coding</li>
-                        </ul>
-					</nav>
-
-                    <aside class="notes">
-                        Plan
-                    </aside>
-				</section>
-
-				<section>
                     <section>
                         <h2>Pourquoi Tester ?</h2>
                         <p>
-                            Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
+                            <img class="no-border" src="img/poney.gif"/>
                         </p>
                         <aside class="notes">
-                            Christophe
+                            Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
                         </aside>
                     </section>
                     <section>
@@ -77,23 +64,14 @@
                     </section>
                     <section>
                         <h2>Pourquoi Tester ?</h2>
-                        <p><img src="img/MarketShare_all.png"/></p>
-                        <p><i>source : <a href="http://www.w3counter.com">www.w3counter.com</a></i></p>
+                        <p><img class="no-border" src="img/browser-logos.jpg"/></p>
                         <aside class="notes">
                             Christophe
                         </aside>
                     </section>
                     <section>
                         <h2>Pourquoi Tester ?</h2>
-                        <p><img src="img/MarketShare_IE_vs_Others.png"/></p>
-                        <br><i>source : <a href="http://www.w3counter.com">www.w3counter.com</a></i></p>
-                        <aside class="notes">
-                            Christophe
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Pourquoi Tester ?</h2>
-                        <p><img src="img/Compatibilite_CanIUse.png"/><p>
+                        <p><img class="no-border" src="img/Compatibilite_CanIUse.png"/><p>
                         <br><i>source : <a href="http://caniuse.com">www.caniuse.com</a></i></p>
                         <aside class="notes">
                             Christophe
@@ -108,19 +86,26 @@
 
                     <section>
                         <h2>Le projet : une TODO list en TDD </h2>
-                        <p><img src="img/ScreenshotAppli.gif"/><p>
+                        <img class="no-border" src="img/todo.gif"/>
+                    </section>
+
+                    <section>
+                        <h2>Test Driven Development</h2>
+                        <p><img class="no-border" src="img/TDD.png"/><p>
                     </section>
 
                     <section>
                         <h2>Test unitaire</h2>
-                        <ul>
-                            <li>
-                                Mocha pour encapsuler les tests
-                            </li>
-                            <li>
-                                ChaiJs pour les assertions
-                            </li>
-                        </ul>
+                        <table class="v-align-middle">
+                            <tr>
+                                <td><img class="no-border" src="img/mochajs.png" /></td>
+                                <td>pour encapsuler les tests</td>
+                            </tr>
+                            <tr>
+                                <td><img class="no-border" src="img/chaijs.png" /></td>
+                                <td>pour les assertions</td>
+                            </tr>
+                        </table>
                     </section>
 
                     <section>
@@ -200,7 +185,7 @@ Model.prototype.addElement = function(element) {
                         <h2>Test'em</h2>
                         <p><i>Test'em 'Scripts! A test runner that makes Javascript unit testing fun.</i></p>
                         <p class="fragment">
-                            <img src="img/PrincipeTestem.png"/>
+                            <img class="no-border" src="img/PrincipeTestem.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
@@ -209,7 +194,7 @@ Model.prototype.addElement = function(element) {
                     <section>
                         <h2>Test'em</h2>
                         <p>
-                            <img src="img/Testem.png"/>
+                            <img class="no-border" src="img/Testem.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
@@ -219,7 +204,7 @@ Model.prototype.addElement = function(element) {
                     <section>
                         <h2>Step #3</h2>
                         <p>
-                            <img src="img/JsHtml.png"/>
+                            <img class="no-border" src="img/JsHtml.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
@@ -231,7 +216,7 @@ Model.prototype.addElement = function(element) {
                         <h2>Step #4</h2>
 
                         <p>
-                            <img src="img/EndToEnd.png"/>
+                            <img class="no-border" src="img/EndToEnd.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
