@@ -36,6 +36,8 @@
 						<small>Christophe PROMÉ et Nicolas MEDDA</small>
 					</p>
 
+                    <img src="http://www.iconshock.com/img_jpg/REALVISTA/development/jpg/128/beta_icon.jpg"/>
+
                     <aside class="notes">
                         Home
                     </aside>
@@ -61,6 +63,7 @@
                         <p>
                             Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
                         </p>
+                        <img src="img/poney.png"/>
                         <aside class="notes">
                             Christophe
                         </aside>
@@ -85,14 +88,6 @@
                     </section>
                     <section>
                         <h2>Pourquoi Tester ?</h2>
-                        <p><img src="img/MarketShare_IE_vs_Others.png"/></p>
-                        <br><i>source : <a href="http://www.w3counter.com">www.w3counter.com</a></i></p>
-                        <aside class="notes">
-                            Christophe
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Pourquoi Tester ?</h2>
                         <p><img src="img/Compatibilite_CanIUse.png"/><p>
                         <br><i>source : <a href="http://caniuse.com">www.caniuse.com</a></i></p>
                         <aside class="notes">
@@ -111,22 +106,26 @@
                     </section>
 
                      <section>
-                        <h2>Step #1</h2>
+                        <h2>Les outils de tests</h2>
 
-                        <pre class="fragment"><code class="bash">
-christophe@antares:$ curl http://localhost:5000
-
-&lt;!doctype html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;Le Projet !&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;      
-    &lt;/body&gt;
-&lt;/html&gt;
-
-                        </code></pre>
+                        <table class="fragment">
+<tr><td>OUTILS</td><td>RUNNER</td><td>FRAMEWORK</td><td>ASSERTER</td><td>DOM Interaction</td><td> Mock</td></tr>
+<tr><td>karma</td><td>X</td></tr>
+<tr><td>Testem</td><td>X</td></tr>
+<tr><td>DalekJs</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td>CasperJs</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+<!-- 
+<tr><td>SpaTester       X   X   X   </tr>
+<tr><td>Mocha       X           </tr>
+<tr><td>ChaiJs          X       </tr>
+<tr><td>Jasmine     X   X       X</tr>
+<tr><td>ExpectJs            X       </tr>
+<tr><td>ShouldJs            X       </tr>
+<tr><td>Better-assert           X       </tr>
+<tr><td>EffroiJs                X   </tr>
+-->
+<tr><td>Sinon</td><td></td><td></td><td></td><td></td><td>X</td></tr>
+                        </table>
                         
                         <aside class="notes">
                         
@@ -201,11 +200,11 @@ Model.prototype.addElement = function(element) {
                         <h2>Stub !</h2>
 <pre><code>function Store() {}
 Store.prototype.findAll = function() {
-    console.log('je suis la vrai methode findAll');
+    console.log('je suis la vraie methode findAll');
 }
 
 store.findAll();
-// => je suis la vrai methode findAll
+// => je suis la vraie methode findAll
 
 sinon.stub(store, 'findAll').yields('Je suis le stub de store.findAll');
 
@@ -235,7 +234,7 @@ mock.expects('findAll').once();
 model.all();
 
 mock.verify();
-// On s'assure que la méthode all de model à bien appelé
+// On s'assure que la méthode all de model à bien appellé
 // la methode findAll de store;
 </code></pre>
                         <aside class="notes">
@@ -259,7 +258,7 @@ Store.findAll = function() {
 
 var store = new Store();
 store.findAll();
-// => L'appel xhr dans la methode recevra les données définie
+// => L'appel xhr dans la methode recevra les données définies
 //      dans server.respondWith
 </code></pre>
                     </section>
