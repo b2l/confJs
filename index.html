@@ -74,7 +74,7 @@
                     <section>
                         <h2>... automatiquement</h2>
                         <p>
-                            <canvas id="testingCost" width="800" height="600"></canvas>
+                            <img src="img/coutTests.png" class="no-border"/>
                         </p>
                         <aside class="notes">
                             Christophe
@@ -181,9 +181,8 @@
                     <section>
                         <h2>Outils</h2>
                         <table class="v-align-middle">
-                            <tr class="fragment fade-in">
-                                <td colspan="2">
-                                    <h4><b>Full stack</b></h4>
+                            <tr>
+                                <td>
                                     <img class="no-border" src="img/dalekLogo.png" style="margin-right:100px"/>
                                     <img class="no-border" src="img/casperjsLogo.jpg" />
                                 </td>
@@ -240,7 +239,7 @@ mock.expects('findAll').once();
 model.all();
 
 mock.verify();
-// On s'assure que la méthode all de model à bien appelé
+// On s'assure que la méthode all de model a bien appelé
 // la methode findAll de store;
 </code></pre>
                         <aside class="notes">
@@ -272,10 +271,18 @@ store.findAll();
                 </section>
 
                 <section>
-                    <h2>Liens</h2>
-                    <p>
-                        TODO
-                    </p>
+                    <table  class="v-align-middle">
+                        <tr><td>Mocha</td><td><a href="http://visionmedia.github.io/mocha/">http://visionmedia.github.io/mocha</a></td></tr>
+                        <tr><td>Chai</td><td><a href="http://chaijs.com/">http://chaijs.com</a></td></tr>
+                        <tr><td>Sinon</td><td><a href="http://sinonjs.org/">http://sinonjs.org</a></td></tr>
+                        <tr><td>Testem</td><td><a href="http://github.com/airportyh/testem">http://github.com/airportyh/testem</a></td></tr>
+                        <tr><td>Karma</td><td><a href="http://karma-runner.github.io/">http://karma-runner.github.io</a></td></tr>
+                        <tr><td>CasperJS</td><td><a href="http://casperjs.org">http://casperjs.org</a></td></tr>
+                        <tr><td>DalekJS</td><td><a href="http://dalekjs.com/">http://dalekjs.com</a></td></tr>
+                        <tr><td>Effroi</td><td><a href="http://github.com/francejs/effroi/">http://github.com/francejs/effroi</a></td></tr>
+                    </table>
+                    <hr>
+                    <a href="http://github.com/b2l/testerSonCodeJsAutomatiquement">http://github.com/b2l/testerSonCodeJsAutomatiquement</a>
                     <aside class="notes">
                         bliblablou
                     </aside>
@@ -295,7 +302,6 @@ store.findAll();
 		</div>
 
         <script src="lib/js/head.min.js"></script>
-		<script src="lib/js/Chart.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
 		<script>
@@ -324,36 +330,5 @@ store.findAll();
 
 		</script>
 
-        <script type="text/javascript">
-            // Coût d'un bug
-            var ctx = document.getElementById("testingCost").getContext("2d");
-            var data = {
-                labels : ["1 jour","1 semaine","1 mois","3 mois","6 mois","1 an","5 ans"],
-                datasets : [
-                    {
-                        fillColor : "rgba(151,187,205,0.0)",
-                        strokeColor : "rgba(151,187,205,1)",
-                        pointColor : "rgba(151,187,205,1)",
-                        pointStrokeColor : "#fff",
-                        data : [5,15,50,100,200, 300, 500]
-                    },
-                    {
-                        fillColor : "rgba(151,187,205,0.0)",
-                        strokeColor : "rgba(187,151,205,1)",
-                        pointColor : "rgba(187,151,205,1)",
-                        pointStrokeColor : "#fff",
-                        data : [5,10,12,15,20,25,30]
-                    }
-                ]
-            };
-            var options = {
-                bezierCurve : false,
-                scaleShowLabels: false,
-                scaleShowLine: false,
-                animation: false,
-                scaleFontSize : 31
-            };
-            var chart = new Chart(ctx).Line(data, options);
-        </script>
 	</body>
 </html>
