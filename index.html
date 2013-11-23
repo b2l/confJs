@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 	<head>
 		<meta charset="utf-8">
@@ -34,7 +34,7 @@
 				<section>
 					<h2>Tester son code JS dans tous les navigateurs ... <br/> automatiquement !</h2>
 					<p>
-						<small>Christophe PROMÉ et Nicolas MEDDA</small>
+						<small>Nicolas MEDDA - Christophe PROMÉ</small>
 					</p>
 
                     <aside class="notes">
@@ -44,35 +44,38 @@
 
 				<section>
                     <section>
-                        <h2>Pourquoi Tester ?</h2>
-                        <p>
+                        <h2>Tester son code JS...</h2>
+                        <p class="fragment">
                             <img class="no-border" src="img/poney.gif"/>
                         </p>
                         <aside class="notes">
-                            Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
+                            Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool. Exemple : poney rose de google
+                            <br/><b>Flèche BAS</b>
                         </aside>
                     </section>
                     <section>
-                        <h2>Pourquoi Tester ?</h2>
+                        <h2>... dans tout les navigateurs ...</h2>
+                        <p><img class="no-border" src="img/browser-logos.jpg"/></p>
+                        <aside class="notes">
+                            Dans tout les browsers ?
+                            bcp de browsers sur le marché, pas facile
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>... dans tout les navigateurs ...</h2>
                         <p>
-                            Coût d'un bug
-                            <canvas id="bugCost" width="800" height="600"></canvas>
+                            <img class="no-border" src="img/Compatibilite_CanIUse.png"/>
+                            <br><i>source : <a href="http://caniuse.com">caniuse.com</a></i>
                         </p>
                         <aside class="notes">
                             Christophe
                         </aside>
                     </section>
                     <section>
-                        <h2>Pourquoi Tester ?</h2>
-                        <p><img class="no-border" src="img/browser-logos.jpg"/></p>
-                        <aside class="notes">
-                            Christophe
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Pourquoi Tester ?</h2>
-                        <p><img class="no-border" src="img/Compatibilite_CanIUse.png"/><p>
-                        <br><i>source : <a href="http://caniuse.com">www.caniuse.com</a></i></p>
+                        <h2>... automatiquement</h2>
+                        <p>
+                            <canvas id="testingCost" width="800" height="600"></canvas>
+                        </p>
                         <aside class="notes">
                             Christophe
                         </aside>
@@ -80,165 +83,135 @@
                 </section>
 
                 <section>
-                    <section>
-                        <h2>Live coding</h2>
-                    </section>
+                    <h2>Live coding</h2>
+                </section>
+
+                <section>
 
                     <section>
-                        <h2>Le projet : une TODO list en TDD </h2>
+                        <h2>Une TODO list</h2>
                         <img class="no-border" src="img/todo.gif"/>
                     </section>
 
                     <section>
-                        <h2>Test Driven Development</h2>
-                        <p><img class="no-border" src="img/TDD.png"/><p>
+                        <h2>En TDD </h2>
+                        <p><img class="no-border" src="img/Red_Green_Refactor.jpg"/><p>
+                        <aside class="notes">
+                         le TDD c'est quoi ?
+                        </aside>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Test unitaire</h2>
+                        <ul>
+                            <li/>Tester <b>une chose</b> et une seule</p>
+                            <li/>Ignorer le reste du monde</p>
+                        </ul>
+                    </section>
+
+
+                    <section>
+                        <h2>Outils</h2>
+                        
+                        <table class="v-align-middle">
+                            <tr>
+                                <td>
+                                    <h4>Framework</h4>
+                                    <img class="no-border" src="img/mochajs.png" />
+                                </td>
+                                <td>
+                                    <h4>Asserter</h4>
+                                    <img class="no-border" src="img/chaijs.png" />
+                                </td>
+                            </tr>
+                        </table>
+                        <aside class="notes">
+                            Chaijs : BDD (behavior driven development)
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Test d'intégration / UI</h2>
+                        <ul>
+                            <li/>On agit sur le DOM
+                            <li/>Assertion sur l'état du DOM
+                            <li/>Dans un browser
+                        </ul>
                     </section>
 
                     <section>
-                        <h2>Test unitaire</h2>
+                        <h2>Outils</h2>
                         <table class="v-align-middle">
-                            <tr>
-                                <td><img class="no-border" src="img/mochajs.png" /></td>
-                                <td>pour encapsuler les tests</td>
+                            <tr class="fragment fade-in">
+                                <td colspan="2">
+                                    <h4><b>Runner</b></h4>
+                                    <img class="no-border" src="img/testemLogo.png" style="margin-right:60px"/>
+                                    <img class="no-border" src="img/karmaLogo.png" />
+                                </td>
                             </tr>
                             <tr>
-                                <td><img class="no-border" src="img/chaijs.png" /></td>
-                                <td>pour les assertions</td>
+                                <td>
+                                    <h4>Framework</h4>
+                                    <img class="no-border" src="img/mochajs.png" />
+                                </td>
+                                <td>
+                                    <h4>Asserter</h4>
+                                    <img class="no-border" src="img/chaijs.png" />
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>e2e</h2>
+                        <ul>
+                            <li>
+                                On intègre le serveur
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Outils</h2>
+                        <table class="v-align-middle">
+                            <tr class="fragment fade-in">
+                                <td colspan="2">
+                                    <h4><b>Full stack</b></h4>
+                                    <img class="no-border" src="img/dalekLogo.png" style="margin-right:100px"/>
+                                    <img class="no-border" src="img/casperjsLogo.jpg" />
+                                </td>
                             </tr>
                         </table>
                     </section>
 
                     <section>
-                        <h2>Test d'intégration / UI</h2>
+                        <h2>Maintenant qu'il y a un serveur...</h2>
                         <ul>
                             <li>
-                                On agit sur le DOM
-                            </li>
-                            <li>
-                                Assertion sur l'état du DOM
-                            </li>
-                            <li>
-                                Testem / Karma
+                                TODO
                             </li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2>End 2 End</h2>
-                        <ul>
-                            <li>
-                                Dalek / Casper ...
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>Intégration...</h2>
-                        <h3>maintenant qu'il y a un serveur</h3>
-                        <ul>
-                            <li>
-                                Mock et ses copains
-                            </li>
-                        </ul>
-                    </section>
-
-                     <section>
-                        <h2>Step #1</h2>
-
-                        <pre class="fragment"><code class="bash">
-christophe@antares:$ curl http://localhost:5000
-
-&lt;!doctype html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;Le Projet !&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;      
-    &lt;/body&gt;
-&lt;/html&gt;
-
-                        </code></pre>
-                        
-                        <aside class="notes">
-                        
-                        </aside>
-                    </section>
-
-
-                    <section>
-                        <h2>Step #2</h2>
-                        <pre class="fragment"><code class="javascript">
-function Model() {
-    this.elements = [];
-}
-
-Model.prototype.addElement = function(element) {
-    this.elements.push(element);
-};
-                        </code></pre>
-                        <aside class="notes">
-                            Nico: Les différents type de test
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Test'em</h2>
-                        <p><i>Test'em 'Scripts! A test runner that makes Javascript unit testing fun.</i></p>
-                        <p class="fragment">
-                            <img class="no-border" src="img/PrincipeTestem.png"/>
-                        </p>
-                        <aside class="notes">
-                            Nico: Les différents type de test
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Test'em</h2>
-                        <p>
-                            <img class="no-border" src="img/Testem.png"/>
-                        </p>
-                        <aside class="notes">
-                            Nico: Les différents type de test
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Step #3</h2>
-                        <p>
-                            <img class="no-border" src="img/JsHtml.png"/>
-                        </p>
-                        <aside class="notes">
-                            Nico: Les différents type de test
-                        </aside>
-                    </section>
-
-
-                    <section>
-                        <h2>Step #4</h2>
-
-                        <p>
-                            <img class="no-border" src="img/EndToEnd.png"/>
-                        </p>
-                        <aside class="notes">
-                            Nico: Les différents type de test
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Step #5</h2>
-
-                        Mock, Stub, Spies et FakeXHR
-                    </section>
-
-                    <section>
-                        <h2>Stub !</h2>
-<pre><code>function Store() {}
+                        <h2>stub</h2>
+<pre  class="fragment"><code>function Store() {}
 Store.prototype.findAll = function() {
     console.log('je suis la vrai methode findAll');
 }
 
 store.findAll();
 // => je suis la vrai methode findAll
-
+</code></pre>
+<pre class="fragment">
+<code>
 sinon.stub(store, 'findAll').yields('Je suis le stub de store.findAll');
 
 store.findAll(); // => Je suis le stub de store.findAll
@@ -257,8 +230,8 @@ store.findAll = function() {
                     </section>
 
                     <section>
-                        <h2>Mock !</h2>
-<pre><code>var store = new Store();
+                        <h2>mock</h2>
+<pre class="fragment"><code>var store = new Store();
 var model = new Model(store);
 
 var mock = sinon.mock(store);
@@ -277,9 +250,9 @@ mock.verify();
                     </section>
 
                     <section>
-                        <h2>FakeXHR !</h2>
+                        <h2>fakeServer</h2>
 
-<pre><code>var server = sinon.fakeServer.create();
+<pre class="fragment"><code>var server = sinon.fakeServer.create();
 server.autoRespond = true;
 server.respondWith('GET', '/elements', [200, {
     'Content-Type': 'application/json'
@@ -296,6 +269,16 @@ store.findAll();
 </code></pre>
                     </section>
 
+                </section>
+
+                <section>
+                    <h2>Liens</h2>
+                    <p>
+                        TODO
+                    </p>
+                    <aside class="notes">
+                        bliblablou
+                    </aside>
                 </section>
 
                 <section>
@@ -343,7 +326,7 @@ store.findAll();
 
         <script type="text/javascript">
             // Coût d'un bug
-            var ctx = document.getElementById("bugCost").getContext("2d");
+            var ctx = document.getElementById("testingCost").getContext("2d");
             var data = {
                 labels : ["1 jour","1 semaine","1 mois","3 mois","6 mois","1 an","5 ans"],
                 datasets : [
@@ -360,7 +343,8 @@ store.findAll();
                 bezierCurve : false,
                 scaleShowLabels: false,
                 scaleShowLine: false,
-                animation: false
+                animation: false,
+                scaleFontSize : 31
             };
             var chart = new Chart(ctx).Line(data, options);
         </script>

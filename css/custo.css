@@ -1,15 +1,28 @@
-.v-align-middle td {
-  vertical-align: middle;
+.reveal table.v-align-middle {
+  margin: auto;
+}
+.reveal table.v-align-middle td {    
+    padding: 15px 40px;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .reveal section img.no-border {
-  margin: 45px 0px;
-  background: inherit;
-  border: none;
-  box-shadow: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
+    margin: 15px 0px;
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.reveal h2 {
+    margin: 0 0 50px 0;
+}
+
+.reveal ul {
+    list-style-type: none;
 }
