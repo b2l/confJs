@@ -8,8 +8,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/custo.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,24 +37,8 @@
 						<small>Christophe PROMÉ et Nicolas MEDDA</small>
 					</p>
 
-                    <img src="http://www.iconshock.com/img_jpg/REALVISTA/development/jpg/128/beta_icon.jpg"/>
-
                     <aside class="notes">
                         Home
-                    </aside>
-				</section>
-
-				<section>
-					<h2>Agenda</h2>
-					<nav>
-                        <ul>
-                            <li>Pourquoi tester ?</li>
-                            <li>Live coding</li>
-                        </ul>
-					</nav>
-
-                    <aside class="notes">
-                        Plan
                     </aside>
 				</section>
 
@@ -61,11 +46,10 @@
                     <section>
                         <h2>Pourquoi Tester ?</h2>
                         <p>
-                            Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
+                            <img class="no-border" src="img/poney.gif"/>
                         </p>
-                        <img src="img/poney.png"/>
                         <aside class="notes">
-                            Christophe
+                            Parce que lorsque l'on se rend compte d'un bug alors que le produit est en production depuis 2 semaines, c'est pas très cool.
                         </aside>
                     </section>
                     <section>
@@ -80,15 +64,14 @@
                     </section>
                     <section>
                         <h2>Pourquoi Tester ?</h2>
-                        <p><img src="img/MarketShare_all.png"/></p>
-                        <p><i>source : <a href="http://www.w3counter.com">www.w3counter.com</a></i></p>
+                        <p><img class="no-border" src="img/browser-logos.jpg"/></p>
                         <aside class="notes">
                             Christophe
                         </aside>
                     </section>
                     <section>
                         <h2>Pourquoi Tester ?</h2>
-                        <p><img src="img/Compatibilite_CanIUse.png"/><p>
+                        <p><img class="no-border" src="img/Compatibilite_CanIUse.png"/><p>
                         <br><i>source : <a href="http://caniuse.com">www.caniuse.com</a></i></p>
                         <aside class="notes">
                             Christophe
@@ -103,19 +86,26 @@
 
                     <section>
                         <h2>Le projet : une TODO list en TDD </h2>
-                        <p><img src="img/ScreenshotAppli.gif"/><p>
+                        <img class="no-border" src="img/todo.gif"/>
+                    </section>
+
+                    <section>
+                        <h2>Test Driven Development</h2>
+                        <p><img class="no-border" src="img/TDD.png"/><p>
                     </section>
 
                     <section>
                         <h2>Test unitaire</h2>
-                        <ul>
-                            <li>
-                                Mocha pour encapsuler les tests
-                            </li>
-                            <li>
-                                ChaiJs pour les assertions
-                            </li>
-                        </ul>
+                        <table class="v-align-middle">
+                            <tr>
+                                <td><img class="no-border" src="img/mochajs.png" /></td>
+                                <td>pour encapsuler les tests</td>
+                            </tr>
+                            <tr>
+                                <td><img class="no-border" src="img/chaijs.png" /></td>
+                                <td>pour les assertions</td>
+                            </tr>
+                        </table>
                     </section>
 
                     <section>
@@ -153,26 +143,22 @@
                     </section>
 
                      <section>
-                        <h2>Les outils de tests</h2>
+                        <h2>Step #1</h2>
 
-                        <table class="fragment">
-<tr><td>OUTILS</td><td>RUNNER</td><td>FRAMEWORK</td><td>ASSERTER</td><td>DOM Interaction</td><td> Mock</td></tr>
-<tr><td>karma</td><td>X</td></tr>
-<tr><td>Testem</td><td>X</td></tr>
-<tr><td>DalekJs</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
-<tr><td>CasperJs</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
-<!-- 
-<tr><td>SpaTester       X   X   X   </tr>
-<tr><td>Mocha       X           </tr>
-<tr><td>ChaiJs          X       </tr>
-<tr><td>Jasmine     X   X       X</tr>
-<tr><td>ExpectJs            X       </tr>
-<tr><td>ShouldJs            X       </tr>
-<tr><td>Better-assert           X       </tr>
-<tr><td>EffroiJs                X   </tr>
--->
-<tr><td>Sinon</td><td></td><td></td><td></td><td></td><td>X</td></tr>
-                        </table>
+                        <pre class="fragment"><code class="bash">
+christophe@antares:$ curl http://localhost:5000
+
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Le Projet !&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;      
+    &lt;/body&gt;
+&lt;/html&gt;
+
+                        </code></pre>
                         
                         <aside class="notes">
                         
@@ -199,7 +185,7 @@ Model.prototype.addElement = function(element) {
                         <h2>Test'em</h2>
                         <p><i>Test'em 'Scripts! A test runner that makes Javascript unit testing fun.</i></p>
                         <p class="fragment">
-                            <img src="img/PrincipeTestem.png"/>
+                            <img class="no-border" src="img/PrincipeTestem.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
@@ -208,7 +194,7 @@ Model.prototype.addElement = function(element) {
                     <section>
                         <h2>Test'em</h2>
                         <p>
-                            <img src="img/Testem.png"/>
+                            <img class="no-border" src="img/Testem.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
@@ -218,7 +204,7 @@ Model.prototype.addElement = function(element) {
                     <section>
                         <h2>Step #3</h2>
                         <p>
-                            <img src="img/JsHtml.png"/>
+                            <img class="no-border" src="img/JsHtml.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
@@ -230,7 +216,7 @@ Model.prototype.addElement = function(element) {
                         <h2>Step #4</h2>
 
                         <p>
-                            <img src="img/EndToEnd.png"/>
+                            <img class="no-border" src="img/EndToEnd.png"/>
                         </p>
                         <aside class="notes">
                             Nico: Les différents type de test
@@ -247,11 +233,11 @@ Model.prototype.addElement = function(element) {
                         <h2>Stub !</h2>
 <pre><code>function Store() {}
 Store.prototype.findAll = function() {
-    console.log('je suis la vraie methode findAll');
+    console.log('je suis la vrai methode findAll');
 }
 
 store.findAll();
-// => je suis la vraie methode findAll
+// => je suis la vrai methode findAll
 
 sinon.stub(store, 'findAll').yields('Je suis le stub de store.findAll');
 
@@ -281,7 +267,7 @@ mock.expects('findAll').once();
 model.all();
 
 mock.verify();
-// On s'assure que la méthode all de model à bien appellé
+// On s'assure que la méthode all de model à bien appelé
 // la methode findAll de store;
 </code></pre>
                         <aside class="notes">
@@ -305,7 +291,7 @@ Store.findAll = function() {
 
 var store = new Store();
 store.findAll();
-// => L'appel xhr dans la methode recevra les données définies
+// => L'appel xhr dans la methode recevra les données définie
 //      dans server.respondWith
 </code></pre>
                     </section>
